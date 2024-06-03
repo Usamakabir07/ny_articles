@@ -1,6 +1,6 @@
 # ny_articles MVP Project
 
-This is a Flutter project following the Model-View-Presenter (MVP) architecture pattern.
+This is a Flutter project following the Model-View-ViewModel (MVVM) architecture pattern.
 
 
 ## Requirements
