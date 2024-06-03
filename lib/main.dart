@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:ny_articles/route_generator.dart';
 import 'package:ny_articles/utils/navigation_service.dart';
 import 'package:ny_articles/view/articles/articles_screen.dart';
@@ -6,7 +9,8 @@ import 'package:ny_articles/viewModels/articles_view_model.dart';
 import 'package:provider/provider.dart';
 import 'injection_container.dart' as di;
 
-void main() async {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   di.init();
   runApp(const MyApp());
 }

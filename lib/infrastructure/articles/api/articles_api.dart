@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import '../../apiUtil/urls.dart';
 
@@ -11,7 +12,7 @@ class GetArticlesApi {
     required String duration,
   }) async {
     Response response = await dio.get(
-      duration + Urls.apiKey,
+      duration + dotenv.env['NY_API_KEY']!,
     );
     return response;
   }
