@@ -60,23 +60,15 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 )
               : RefreshIndicator(
                   onRefresh: () => viewModel.refreshArticles(duration: "7"),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Expanded(
-                        child: ListView.builder(
-                          itemCount: viewModel.mostViewedArticles.length,
-                          physics: const AlwaysScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          itemBuilder: (context, index) {
-                            return ArticleTile(
-                              mostViewedArticle:
-                                  viewModel.mostViewedArticles[index],
-                            );
-                          },
-                        ),
-                      )
-                    ],
+                  child: ListView.builder(
+                    itemCount: viewModel.mostViewedArticles.length,
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      return ArticleTile(
+                        mostViewedArticle: viewModel.mostViewedArticles[index],
+                      );
+                    },
                   ),
                 );
         },
