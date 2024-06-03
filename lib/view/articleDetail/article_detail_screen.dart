@@ -18,7 +18,16 @@ class ArticleDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: MyColors.noColor,
+        iconTheme: IconThemeData(color: MyColors.white),
+        backgroundColor: MyColors.foregroundColor,
+        title: Text(
+          "Article Detail",
+          style: TextStyle(
+            fontSize: 18,
+            color: MyColors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
       ),
       body: SafeArea(
         child: Container(
