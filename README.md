@@ -1,4 +1,4 @@
-# ny_articles MVP Project
+# ny_articles MVVM Project
 
 This is a Flutter project following the Model-View-ViewModel (MVVM) architecture pattern.
 
